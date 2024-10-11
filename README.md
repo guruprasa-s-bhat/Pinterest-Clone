@@ -39,8 +39,7 @@ This is a fully functional Pinterest-inspired web application developed using th
    git clone https://github.com/guruprasa-s-bhat/Pinterest-Clone.git
 
 2.Navigate to the project directory:
-  ```bash
-   cd Pinterest-Clone
+   - cd Pinterest-Clone
 
 3.Install the dependencies:
    - npm install
