@@ -40,7 +40,13 @@ This is a fully functional Pinterest-inspired web application developed using th
 
 2.Navigate to the project directory:
   ```bash
-  cd Pinterest-Clone
+   cd Pinterest-Clone
+
+3.Install the dependencies:
+   ```bash
+   npm install
+
+
 
  
 
