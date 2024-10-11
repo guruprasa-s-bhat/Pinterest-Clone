@@ -1,0 +1,63 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saved Posts</title>
+    <link rel="stylesheet" href="/stylesheets/saved.css" />
+    <link rel="stylesheet" href="/stylesheets/created.css" />
+  </head>
+  <body>
+    <a href="/profile" class="back-button">Back</a>
+    <div class="container">
+      <h1 class="page-title">Saved Posts</h1>
+      <div class="cards flex">
+        <% posts.forEach(function(post) { %>
+        <div class="card" style="width: 18rem">
+          <img
+            src="/images/uploads/<%= post.image %>"
+            class="card-img-top"
+            alt="Post image"
+          />
+          <div class="card-body">
+            <h5 class="card-title"><%= post.postText %></h5>
+            <p class="card-description"><%= post.description %></p>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/profile.css" />
+    <link rel="stylesheet" href="/stylesheets/created.css" />
+  </head>
+  <body>
+    <h1 class="saved_image">Saved images</h1>
+    <a href="/profile" class="back-button">Back</a>
+    <div class="container" style="margin: 110px">
+      <div class="cards flex">
+        <% posts.forEach(function(post) { %>
+        <div class="card" style="width: 18rem">
+          <img
+            src="/images/uploads/<%= post.image %>"
+            class="card-img-top"
+            alt="Post image"
+          />
+          <div class="card-body">
+            <h5 class="card-title"><%= post.postText %></h5>
+            <p class="card-title"><%= post.description %></p>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+  </body>
+</html>

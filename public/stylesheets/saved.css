@@ -1,0 +1,84 @@
+/* Reset margins and paddings for consistency */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+/* Back button styling */
+.back-button {
+  display: block;
+  margin: 20px 40px; /* Adjust as needed */
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #007bff; /* Bootstrap primary color */
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  position: fixed;
+  top: 20px; /* Position from the top */
+  right: 20px; /* Position from the right */
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+
+.back-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Container styling */
+.container {
+  margin-top: 80px; /* Adjust as needed */
+  padding: 20px;
+}
+
+/* Page title styling */
+.page-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Flexbox container for cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between cards */
+  justify-content: center; /* Center the cards */
+}
+
+/* Card styling */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Card image styling */
+.card-img-top {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Card body styling */
+.card-body {
+  padding: 15px;
+}
+
+/* Card title styling */
+.card-title {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Card description styling */
+.card-description {
+  font-size: 14px;
+  color: #666;
+}

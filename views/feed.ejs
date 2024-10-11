@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/feed.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <title>Feed</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a class="navbar-brand" href="">
+          <img
+            src="https://i.pinimg.com/originals/d3/d1/75/d3d175e560ae133f1ed5cd4ec173751a.png"
+            alt="pin logo"
+            class="img1"
+            width="50"
+            height="40"
+          />
+          <span class="brand-name">Pinterest</span>
+        </a>
+      </div>
+      <ul class="navLink">
+        <li><a href="/profile">Profile</a></li>
+        <li><a href="/upload">Create</a></li>
+        <li><a href="/logout">Logout</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <% posts.forEach(post => { %>
+      <div class="box">
+        <i
+          class="fas fa-heart save-icon"
+          onclick="savePost('<%= post._id %>')"
+        ></i>
+        <a href="/singleCard?id=<%= post._id %>">
+          <img src="/images/uploads/<%= post.image %>" alt="Post Image" />
+        </a>
+        <div class="caption"><%= post.postText %></div>
+      </div>
+      <% }) %>
+    </div>
+
+    <script>
+      function savePost(postId) {
+        fetch(`/save/${postId}`, { method: "POST" })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.success) {
+              alert("Post saved successfully!");
+            } else {
+              alert(data.message || "Failed to save post.");
+            }
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+      }
+    </script>
+  </body>
+</html>

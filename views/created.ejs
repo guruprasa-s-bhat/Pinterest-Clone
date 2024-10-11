@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/profile.css" />
+    <link rel="stylesheet" href="/stylesheets/created.css" />
+  </head>
+  <body>
+    <div class="h1">
+      <h1>CREATED IMAGE</h1>
+    </div>
+    <a href="/profile" class="back-button">Back</a>
+    <div class="container" style="margin: 110px">
+      <div class="cards flex">
+        <% posts.forEach(function(post) { %>
+        <div class="card" style="width: 18rem">
+          <img
+            src="/images/uploads/<%= post.image %>"
+            class="card-img-top"
+            alt="Post image"
+          />
+          <div class="card-body">
+            <h5 class="card-title"><%= post.postText %></h5>
+            <p class="card-title"><%= post.description %></p>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+  </body>
+</html>
